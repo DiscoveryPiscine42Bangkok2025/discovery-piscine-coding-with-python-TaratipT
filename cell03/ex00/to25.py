@@ -1,5 +1,5 @@
-print("Enter a number less than 25: ")
-num = int(input())
+# print("Enter a number less than 25: ")
+num = int(input("Enter a number less than 25:\n"))
 
 if num < 25:
     for i in range(num, 26):
