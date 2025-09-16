@@ -4,5 +4,5 @@ for i in ori:
     if i > 5:
         new.append(i+2)
 
-print(f"Original array: {ori}")
-print(f"New array: {new}")
+print(ori)
+print(new)
