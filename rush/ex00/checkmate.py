@@ -3,7 +3,7 @@ def inside(r, c, rows, cols):
     return 0 <= r < rows and 0 <= c < cols
 
 def is_piece(ch):
-    # check if a QRBP piece (not .)
+    # check if a QRBPK piece (not .)
     return ch != '.'
 
 def is_attacker(ch):
@@ -31,12 +31,16 @@ def checkmate(board):
     cols = len(lines[0])
     for row in lines:
         if len(row) != cols:
-            print("Error (Not Square)")
+            print("Error (Not Square (Columns > Rows))")
             return
-        
+
+    if rows != cols:
+        print("Error (Not Square (Rows > Columns))")
+        return
+
     if not validate_board(lines):
         return
-    
+
     board = []
     for row in lines:
         board.append(list(row))

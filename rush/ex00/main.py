@@ -51,12 +51,30 @@ R...
 # ....Q...\
 # """
 
-# ##### Error (Size Not Correct)
+# ##### Error (Size Not Correct [Column > Row])
 #     board = """\
 # R...
 # .K.....
 # ..P.
 # ....\
+# """    
+
+# ##### Error (Size Not Correct [Row > Column])
+#     board = """\
+# R...
+# .K..
+# ..P.
+# ....
+# ....
+# ....\
+# """    
+
+# ##### Error (Character not allowed [Row > Column])
+#     board = """\
+# ...Z
+# .K..
+# ..P.
+# ,...\
 # """    
 
 # ##### Error (Double King)
@@ -75,7 +93,6 @@ R...
 # ..R..
 # .....\
 # """
-
     checkmate(board)
 
 if __name__ == "__main__":
